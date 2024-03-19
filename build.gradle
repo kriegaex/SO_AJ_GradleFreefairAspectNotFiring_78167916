@@ -1,0 +1,25 @@
+plugins {
+  id 'java'
+  id 'io.freefair.aspectj' version '8.6'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+//  mavenLocal()
+  mavenCentral()
+}
+
+java {
+  sourceCompatibility = '8'
+  targetCompatibility = '8'
+}
+
+dependencies {
+  implementation group: 'org.aspectj', name: 'aspectjrt', version: '1.9.21.2'
+}
+
+test {
+  useJUnitPlatform()
+}
